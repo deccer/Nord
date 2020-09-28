@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9AFE72AF-0A1B-4789-9716-32D2E01A8024}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nord.Client", "src\Nord.Client\Nord.Client.csproj", "{072357D9-4804-47E6-ABB5-581EE2094B7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{315BEFD7-D8BB-4A06-A632-30D31CB39F51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{EFF4DA22-B742-4B2D-89F7-C84FEF1BC8AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nord.Client.UnitTests", "tests\Nord.Client.UnitTests\Nord.Client.UnitTests.csproj", "{96CDD3A3-B9D2-4B1C-9B9F-C51DBBEA3BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nord.Client.IntegrationTests", "tests\Nord.Client.IntegrationTests\Nord.Client.IntegrationTests.csproj", "{3F8B4CCD-49F1-4499-BBF5-47998B5FF1A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BAB51F99-24D3-4C7E-AFEF-C4D51BA87A87}"
+ProjectSection(SolutionItems) = preProject
+	.editorconfig = .editorconfig
+	.gitignore = .gitignore
+	stylecop.ruleset = stylecop.ruleset
+	LICENSE = LICENSE
+	Nord.sln.DotSettings = Nord.sln.DotSettings
+	stylecop.json = stylecop.json
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{072357D9-4804-47E6-ABB5-581EE2094B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072357D9-4804-47E6-ABB5-581EE2094B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072357D9-4804-47E6-ABB5-581EE2094B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072357D9-4804-47E6-ABB5-581EE2094B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CDD3A3-B9D2-4B1C-9B9F-C51DBBEA3BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CDD3A3-B9D2-4B1C-9B9F-C51DBBEA3BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CDD3A3-B9D2-4B1C-9B9F-C51DBBEA3BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CDD3A3-B9D2-4B1C-9B9F-C51DBBEA3BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8B4CCD-49F1-4499-BBF5-47998B5FF1A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8B4CCD-49F1-4499-BBF5-47998B5FF1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8B4CCD-49F1-4499-BBF5-47998B5FF1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8B4CCD-49F1-4499-BBF5-47998B5FF1A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{072357D9-4804-47E6-ABB5-581EE2094B7C} = {9AFE72AF-0A1B-4789-9716-32D2E01A8024}
+		{96CDD3A3-B9D2-4B1C-9B9F-C51DBBEA3BB7} = {315BEFD7-D8BB-4A06-A632-30D31CB39F51}
+		{3F8B4CCD-49F1-4499-BBF5-47998B5FF1A3} = {315BEFD7-D8BB-4A06-A632-30D31CB39F51}
+	EndGlobalSection
+EndGlobal
