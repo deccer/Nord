@@ -20,6 +20,7 @@ ProjectSection(SolutionItems) = preProject
 	LICENSE = LICENSE
 	Nord.sln.DotSettings = Nord.sln.DotSettings
 	stylecop.json = stylecop.json
+	README = README
 EndProjectSection
 EndProject
 Global
