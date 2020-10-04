@@ -19,6 +19,13 @@
         <PackageReference Include="coverlet.collector" Version="1.2.0" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>..\..\stylecop.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="..\..\stylecop.json" />
+    </ItemGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\..\src\Nord.Client\Nord.Client.csproj" />
     </ItemGroup>
