@@ -1,6 +1,6 @@
-﻿namespace Nord.Client.Configuration
+﻿namespace Nord.Client.Engine.Configuration
 {
-    internal interface IConfigurationSaver
+    public interface IConfigurationSaver
     {
         void SaveConfiguration<T>(string fileName, T configuration) where T : class;
     }

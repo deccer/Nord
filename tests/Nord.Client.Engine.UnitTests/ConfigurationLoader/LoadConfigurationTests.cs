@@ -14,7 +14,7 @@ namespace Nord.Client.UnitTests.ConfigurationLoader
         public void Loading_Configuration_From_NotExistingPath_Will_Return_Null()
         {
             var logger = Substitute.For<ILogger>();
-            var configurationLoader = new Nord.Client.Configuration.ConfigurationLoader(logger);
+            var configurationLoader = new Engine.Configuration.ConfigurationLoader(logger);
 
             configurationLoader
                 .LoadConfiguration<TestConfig.Test>("FileDoesNotExist")
@@ -26,7 +26,7 @@ namespace Nord.Client.UnitTests.ConfigurationLoader
         public void Loading_Configuration_From_ExistingPath_Will_Return_Null()
         {
             var logger = Substitute.For<ILogger>();
-            var configurationLoader = new Nord.Client.Configuration.ConfigurationLoader(logger);
+            var configurationLoader = new Engine.Configuration.ConfigurationLoader(logger);
 
             using var testConfig = new TestConfig();
             configurationLoader

@@ -1,6 +1,6 @@
-﻿namespace Nord.Client.Configuration
+﻿namespace Nord.Client.Engine.Configuration
 {
-    internal sealed class AppSettingsProvider : IAppSettingsProvider
+    public sealed class AppSettingsProvider : IAppSettingsProvider
     {
         private readonly IConfigurationLoader _configurationLoader;
         private readonly IConfigurationSaver _configurationSaver;

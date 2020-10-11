@@ -2,9 +2,9 @@
 using Newtonsoft.Json;
 using Serilog;
 
-namespace Nord.Client.Configuration
+namespace Nord.Client.Engine.Configuration
 {
-    internal sealed class ConfigurationSaver : IConfigurationSaver
+    public sealed class ConfigurationSaver : IConfigurationSaver
     {
         private readonly ILogger _logger;
 

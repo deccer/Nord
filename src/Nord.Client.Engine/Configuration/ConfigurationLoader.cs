@@ -3,7 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Serilog;
 
-namespace Nord.Client.Configuration
+namespace Nord.Client.Engine.Configuration
 {
     public sealed class ConfigurationLoader : IConfigurationLoader
     {

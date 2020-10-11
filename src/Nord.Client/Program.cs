@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
-using Nord.Client.Configuration;
+using Nord.Client.Engine.Configuration;
 using Serilog;
 
 namespace Nord.Client

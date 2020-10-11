@@ -1,6 +1,6 @@
-﻿namespace Nord.Client.Configuration
+﻿namespace Nord.Client.Engine.Configuration
 {
-    internal sealed class VideoSettings
+    public sealed class VideoSettings
     {
         public int Width { get; set; }
 

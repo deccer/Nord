@@ -1,6 +1,6 @@
-﻿namespace Nord.Client.Configuration
+﻿namespace Nord.Client.Engine.Configuration
 {
-    internal interface IAppSettingsProvider
+    public interface IAppSettingsProvider
     {
         AppSettings AppSettings { get; }
 
