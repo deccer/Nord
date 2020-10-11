@@ -22,6 +22,7 @@ ProjectSection(SolutionItems) = preProject
 	stylecop.json = stylecop.json
 	README.md = README.md
 	.github\workflows\build-debug.yml = .github\workflows\build-debug.yml
+	.github\workflows\build-release.yml = .github\workflows\build-release.yml
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nord.Client.Engine", "src\Nord.Client.Engine\Nord.Client.Engine.csproj", "{DA5B4FBC-FDF1-4343-B058-43DE2267BDA0}"
