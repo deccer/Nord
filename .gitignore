@@ -334,3 +334,4 @@ appsettings.user.json
 
 # Rider
 .idea/
+!assets/
