@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="SimplexStudio.Controls.FractalControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:SimplexStudio.ViewModels"
+             xmlns:converters="clr-namespace:SimplexStudio.Converters"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance viewModels:FractalViewModel}"
+             d:DesignHeight="600">
+    <UserControl.Resources>
+        <converters:IntToStringConverter x:Key="IntToStringConverter"/>
+        <converters:DoubleToStringConverter x:Key="DoubleToStringConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Source="{Binding Bitmap}" Width="256" Height="256" VerticalAlignment="Top" Margin="8"/>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock Text="Fractal Type" VerticalAlignment="Center"/>
+            <ComboBox ItemsSource="{Binding FractalTypes}" SelectedItem="{Binding FractalType}" Margin="4,4,4,4" Height="25"/>
+
+            <TextBlock Text="Basis Type" VerticalAlignment="Center"/>
+            <ComboBox ItemsSource="{Binding BasisTypes}" SelectedItem="{Binding BasisType}" Margin="4,4,4,4" Height="25"/>
+
+            <TextBlock Text="Interpolation Type" VerticalAlignment="Center"/>
+            <ComboBox ItemsSource="{Binding InterpolationTypes}" SelectedItem="{Binding InterpolationType}" Margin="4,4,4,4" Height="25"/>
+
+            <TextBlock Text="Octaves" VerticalAlignment="Center"/>
+            <TextBox Margin="4,4,4,4" Text="{Binding Octaves, Converter={StaticResource IntToStringConverter}}" Height="21"/>
+
+            <TextBlock Text="Seed" VerticalAlignment="Center"/>
+            <TextBox Margin="4,4,4,4" Text="{Binding Seed, Converter={StaticResource IntToStringConverter}}" Height="21"/>
+
+            <TextBlock Text="Frequency" VerticalAlignment="Center"/>
+            <TextBox Margin="4,4,4,4" Text="{Binding Frequency, Converter={StaticResource DoubleToStringConverter}}" Height="21"/>
+
+            <TextBlock Text="Lacunarity" VerticalAlignment="Center"/>
+            <TextBox Margin="4,4,4,4" Text="{Binding Lacunarity, Converter={StaticResource DoubleToStringConverter}}" Height="21"/>
+
+            <TextBlock Text="Gain" VerticalAlignment="Center"/>
+            <TextBox Margin="4,4,4,4" Text="{Binding Gain, Converter={StaticResource DoubleToStringConverter}}" Height="21"/>
+        </StackPanel>
+        <Separator Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+    </Grid>
+</UserControl>
