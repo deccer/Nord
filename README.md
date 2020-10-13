@@ -15,3 +15,6 @@ To figure out parameters for world generating noise generators used in Nord.
 
 ![Screenshot 1](assets/screenshots/simplexstudio-20201012-1651.png)
 
+## AtlasStudio
+
+Compose Texture Atlas from various sources.
