@@ -6,7 +6,7 @@
         xmlns:viewModels="clr-namespace:SimplexStudio.ViewModels"
         xmlns:controls="clr-namespace:SimplexStudio.Controls"
         WindowStartupLocation="CenterScreen"
-        mc:Ignorable="d" d:DesignSource="{d:DesignInstance viewModels:MainViewModel}"
+        mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
         Title="MainView" Height="450" Width="800">
     <DockPanel LastChildFill="True">
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
