@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace SimplexStudio.Commands
+namespace Shared.Mvvm.Commands
 {
     public class DelegateCommand : ICommand
     {

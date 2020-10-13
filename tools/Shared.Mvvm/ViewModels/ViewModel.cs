@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using JetBrains.Annotations;
 
-namespace AtlasStudio.ViewModels
+namespace Shared.Mvvm.ViewModels
 {
     public class ViewModel : INotifyPropertyChanged
     {

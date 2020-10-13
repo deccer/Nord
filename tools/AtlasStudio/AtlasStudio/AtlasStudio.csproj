@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net472</TargetFramework>
     <PublishReadyToRun>false</PublishReadyToRun>
     <TieredCompilation>false</TieredCompilation>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <UseWPF>true</UseWPF>
     <LangVersion>latest</LangVersion>
+    <TargetFrameworks>net472;net48</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AccidentalNoise" Version="1.0.0" />
@@ -16,6 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
+    <Folder Include="Converters" />
     <Folder Include="Generators\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared.Mvvm\Shared.Mvvm.csproj" />
   </ItemGroup>
 </Project>

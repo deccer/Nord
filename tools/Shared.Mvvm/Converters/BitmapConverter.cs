@@ -3,7 +3,7 @@ using System.Drawing.Imaging;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace AtlasStudio.Converters
+namespace Shared.Mvvm.Converters
 {
     public static class BitmapConverter
     {

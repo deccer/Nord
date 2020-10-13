@@ -2,8 +2,9 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
-using AtlasStudio.Commands;
-using AtlasStudio.Converters;
+using Shared.Mvvm.Commands;
+using Shared.Mvvm.Converters;
+using Shared.Mvvm.ViewModels;
 using Microsoft.Win32;
 
 namespace AtlasStudio.ViewModels

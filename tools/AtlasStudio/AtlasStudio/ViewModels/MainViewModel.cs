@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using AtlasStudio.Commands;
+using Shared.Mvvm.Commands;
+using Shared.Mvvm.ViewModels;
 
 namespace AtlasStudio.ViewModels
 {

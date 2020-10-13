@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Windows.Input;
 
-namespace AtlasStudio.Commands
+namespace Shared.Mvvm.Commands
 {
     public class DelegateCommand<T> : ICommand
     {
@@ -14,13 +14,16 @@ namespace AtlasStudio.Commands
             _canExecute = canExecute;
         }
 
+        public bool CanExecute(object parameter)
+        {
+            return _canExecute == null || _canExecute((T)parameter);
+        }
+
         public event EventHandler CanExecuteChanged
         {
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
         }
-
-        public bool CanExecute(object parameter) => _canExecute == null || _canExecute((T)parameter);
 
         public void Execute(object parameter)
         {

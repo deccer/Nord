@@ -3,6 +3,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Media.Imaging;
 using RcherNZ.AccidentalNoise;
+using Shared.Mvvm.Converters;
+using Shared.Mvvm.ViewModels;
 using SimplexStudio.Generators;
 
 namespace SimplexStudio.ViewModels

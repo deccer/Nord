@@ -281,7 +281,7 @@ namespace Nord.Client
                     farClipPlane) *
                 Matrix.CreateScale(30);
 
-            _effect.Projection = matrix1;
+            _effect.Projection = matrix2;
 
             GraphicsDevice.RasterizerState = RasterizerState.CullNone;
             GraphicsDevice.DepthStencilState = DepthStencilState.Default;
@@ -314,8 +314,8 @@ namespace Nord.Client
         private void DrawUi()
         {
             var show = true;
-            ImGui.SetNextWindowPos(new Num.Vector2(650, 20), ImGuiCond.FirstUseEver);
-            ImGui.ShowDemoWindow(ref show);
+            //ImGui.SetNextWindowPos(new Num.Vector2(650, 20), ImGuiCond.FirstUseEver);
+            //ImGui.ShowDemoWindow(ref show);
         }
     }
 }
