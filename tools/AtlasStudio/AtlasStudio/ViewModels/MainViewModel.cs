@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using MonoGame.WpfCore.MonoGameControls;
 using Shared.Mvvm.Commands;
 using Shared.Mvvm.ViewModels;
 
@@ -13,7 +14,10 @@ namespace AtlasStudio.ViewModels
             AddSourceAtlasCommand = new DelegateCommand(AddSourceAtlasCommandHandler);
             RemoveSourceAtlasCommand = new DelegateCommand(RemoveSourceAtlasCommandHandler);
             SourceAtlases = new ObservableCollection<SourceAtlasViewModel>();
+            PreviewViewModel = new PreviewViewModel();
         }
+
+        public PreviewViewModel PreviewViewModel { get; }
 
         public ICommand AddSourceAtlasCommand { get; }
 

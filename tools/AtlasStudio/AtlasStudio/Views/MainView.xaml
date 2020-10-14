@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:AtlasStudio.ViewModels"
-        WindowStartupLocation="CenterScreen"
+        xmlns:monoGameControls="clr-namespace:MonoGame.WpfCore.MonoGameControls"
+        WindowStartupLocation="CenterScreen" TextOptions.TextFormattingMode="Display"
         mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
         Title="MainView" Height="450" Width="800">
+    <Window.Resources>
+        <viewModels:PreviewViewModel x:Key="PreviewViewModel" />
+    </Window.Resources>
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
@@ -28,23 +32,56 @@
                           ResizeBehavior="BasedOnAlignment" />
             <GridSplitter Grid.Column="3" VerticalAlignment="Stretch" Width="2" HorizontalAlignment="Stretch" />
             <DockPanel Grid.Column="0" LastChildFill="true">
-                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right" Margin="2">
-                    <Button Content="Add" Margin="2" Command="{Binding AddSourceAtlasCommand}"/>
-                    <Button Content="Remove" Margin="2" Command="{Binding RemoveSourceAtlasCommand}"/>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="2">
+                    <Button Content="Add" Margin="2" Height="25" Width="75" Command="{Binding AddSourceAtlasCommand}" />
+                    <Button Content="Remove" Margin="2" Height="25" Width="75" Command="{Binding RemoveSourceAtlasCommand}" />
                 </StackPanel>
-                <ComboBox DockPanel.Dock="Top" ItemsSource="{Binding SourceAtlases}" SelectedItem="{Binding SelectedSourceAtlas}">
+                <ComboBox DockPanel.Dock="Top" ItemsSource="{Binding SourceAtlases}" SelectedItem="{Binding SelectedSourceAtlas}" Margin="4,2,4,2">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text="{Binding Name}" />
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
                 <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="2">
-                    <Button Content="Load" Margin="2" Command="{Binding SelectedSourceAtlas.LoadSourceAtlasCommand}"/>
+                    <Button Content="Load" Margin="2" Width="75" Height="25" Command="{Binding SelectedSourceAtlas.LoadSourceAtlasCommand}" />
                 </StackPanel>
-                <Image Source="{Binding SelectedSourceAtlas.AtlasBitmapSource}"/>
+                <Image Source="{Binding SelectedSourceAtlas.AtlasBitmapSource}" />
             </DockPanel>
-            <DockPanel Grid.Column="2" />
+            <DockPanel Grid.Column="2" LastChildFill="True" DataContext="{Binding PreviewViewModel}">
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Top" Margin="4" VerticalAlignment="Center" />
+                    <Border Grid.Row="0" Grid.Column="1" BorderThickness="1" BorderBrush="Red" Width="32" Height="32" Margin="4">
+                        <Image />
+                    </Border>
+                    <Button Grid.Row="0" Grid.Column="2" Content="Set" Margin="4" Width="75" Height="25" />
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Left" Margin="4" VerticalAlignment="Center"  />
+                    <Border Grid.Row="1" Grid.Column="1" BorderThickness="1" BorderBrush="Red" Width="32" Height="32" Margin="4">
+                        <Image />
+                    </Border>
+
+                    <Button Grid.Row="1" Grid.Column="2" Content="Set" Margin="4" Width="75" Height="25" />
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Right" Margin="4" VerticalAlignment="Center"  />
+                    <Border Grid.Row="2" Grid.Column="1" BorderThickness="1" BorderBrush="Red" Width="32" Height="32" Margin="4">
+                        <Image />
+                    </Border>
+
+                    <Button Grid.Row="2" Grid.Column="2" Content="Set" Margin="4" Width="75" Height="25" />
+                </Grid>
+                <monoGameControls:MonoGameContentControl x:Name="PreviewControl" DockPanel.Dock="Bottom"/>
+            </DockPanel>
             <DockPanel Grid.Column="4" />
         </Grid>
     </DockPanel>
